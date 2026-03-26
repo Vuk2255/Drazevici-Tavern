@@ -332,53 +332,66 @@
   // ============================================================================
 
   function loadTestimonials() {
+    var track = document.getElementById('testimonials-track');
+    if (!track) return;
+
     fetch('assets/data/reviews.json')
       .then(res => {
         if (!res.ok) throw new Error('Failed to load testimonials');
         return res.json();
       })
       .then(reviews => {
-        try {
-          if (!Array.isArray(reviews)) throw new Error('Invalid data format');
-          
-          const sliderElement = document.getElementById('testimonials-slider');
-          if (!sliderElement) return;
+        if (!Array.isArray(reviews) || !reviews.length) throw new Error('Invalid data format');
 
-          sliderElement.innerHTML = '';
-          
-          reviews.forEach(review => {
-            const stars = Array(5).fill(0).map((_, i) => 
-              `<i class="star ${i < review.reviewDetails.rating ? 'bi bi-star-fill' : 'bi bi-star'}"></i>`
-            ).join('');
-            
-            const card = document.createElement('div');
-            card.className = 'testimonial-card';
-            card.innerHTML = `
-              <div>
-                <div class="testimonial-header">
-                  <img src="${review.author.avatar}" alt="${review.author.name}" class="testimonial-avatar">
-                  <div class="testimonial-info">
-                    <h6>${review.author.name}</h6>
-                    <p>${review.author.profession}</p>
-                  </div>
-                </div>
-                <div class="testimonial-stars">${stars}</div>
-                <p class="testimonial-text">"${review.reviewDetails.text}"</p>
-              </div>
-              <p class="testimonial-date">${new Date(review.reviewDetails.date).toLocaleDateString()}</p>
-            `;
-            
-            sliderElement.appendChild(card);
-          });
-
-          // Duplicate entire set for seamless infinite loop
-          var originalCards = sliderElement.querySelectorAll('.testimonial-card');
-          originalCards.forEach(card => sliderElement.appendChild(card.cloneNode(true)));
-        } catch (error) {
-          console.error('Error processing testimonials:', error);
+        function buildReviewCard(review) {
+          var stars = Array(5).fill(0).map((_, i) =>
+            '<i class="star ' + (i < review.reviewDetails.rating ? 'bi bi-star-fill' : 'bi bi-star') + '"></i>'
+          ).join('');
+          return '<div class="testimonial-card"><div>' +
+            '<div class="testimonial-header">' +
+            '<img src="' + review.author.avatar + '" alt="' + review.author.name + '" class="testimonial-avatar">' +
+            '<div class="testimonial-info"><h6>' + review.author.name + '</h6>' +
+            '<p>' + review.author.profession + '</p></div></div>' +
+            '<div class="testimonial-stars">' + stars + '</div>' +
+            '<p class="testimonial-text">&ldquo;' + review.reviewDetails.text + '&rdquo;</p></div>' +
+            '<p class="testimonial-date">' + new Date(review.reviewDetails.date).toLocaleDateString() + '</p></div>';
         }
+
+        // Build cards and duplicate for seamless infinite loop
+        var cardsHtml = reviews.map(buildReviewCard).join('');
+        track.innerHTML = cardsHtml + cardsHtml;
+
+        var offset = 0;
+        var paused = false;
+        var speed = 0.5;
+
+        function measureHalf() {
+          var cards = track.querySelectorAll('.testimonial-card');
+          var count = cards.length / 2;
+          if (!count || !cards[0]) return 0;
+          var gap = window.innerWidth <= 768 ? 20 : 30;
+          return count * (cards[0].getBoundingClientRect().width + gap);
+        }
+
+        function tick() {
+          if (!paused) {
+            offset += speed;
+            var halfWidth = measureHalf();
+            if (halfWidth > 0 && offset >= halfWidth) offset -= halfWidth;
+            track.style.transform = 'translateX(' + (-offset) + 'px)';
+          }
+          requestAnimationFrame(tick);
+        }
+
+        var wrapper = track.closest('.testimonials-slider-wrapper');
+        if (wrapper) {
+          wrapper.addEventListener('mouseenter', function () { paused = true; });
+          wrapper.addEventListener('mouseleave', function () { paused = false; });
+        }
+
+        tick();
       })
-      .catch(error => console.error('Error loading testimonials:', error));
+      .catch(function (error) { console.error('Error loading testimonials:', error); });
   }
 
   // ============================================================================

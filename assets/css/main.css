@@ -153,6 +153,7 @@ strong {
   right: 0;
   bottom: 0;
   left: 0;
+  pointer-events: none;
 }
 
 ::selection {
@@ -461,10 +462,11 @@ strong {
 
 .navbar {
   background: transparent;
-  z-index: 99;
+  z-index: 1050;
   padding-top: 12px;
   padding-bottom: 12px;
   transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease;
+  position: relative;
 }
 
 .navbar-dark-page {
@@ -882,14 +884,19 @@ strong {
 #offcanvasCart {
   background-color: #1a1a1a;
   color: #ffffff;
+  z-index: 1060;
 }
 
 #offcanvasCart.offcanvas {
   --bs-offcanvas-bg: #1a1a1a;
 }
 
+.offcanvas-backdrop {
+  z-index: 1055;
+}
+
 .offcanvas-backdrop.show {
-  opacity: 0;
+  opacity: 0.5;
 }
 
 #offcanvasCart .offcanvas-header {
@@ -1327,15 +1334,29 @@ strong {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 90%;
+  max-width: 400px;
 }
 
 .contact-info-body {
-  padding: 20px 30px;
+  padding: 20px 15px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  .contact-info-body {
+    padding: 20px 30px;
+  }
 }
 
 .contact-info-body strong,
 .contact-info-item a {
   color: var(--white-color);
+  display: block;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .contact-info-footer {
@@ -1643,10 +1664,8 @@ strong {
   border-radius: var(--border-radius-medium);
 }
 
-.testimonials-slider {
+.testimonials-track {
   display: flex;
-  animation: scroll-testimonials 25s linear infinite;
-  padding: 20px 0;
 }
 
 .testimonial-card {
@@ -1660,13 +1679,13 @@ strong {
   flex-direction: column;
   justify-content: space-between;
   min-height: 300px;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .testimonial-card:hover {
   background: rgba(200, 155, 60, 0.2);
   border-color: #D4AF37;
-  transform: translateY(-5px);
 }
 
 .testimonial-header {
@@ -1721,32 +1740,33 @@ strong {
   font-size: 12px;
 }
 
-@keyframes scroll-testimonials {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.testimonials-slider:hover {
-  animation-play-state: paused;
-}
-
 @media screen and (max-width: 1200px) {
   .testimonial-card {
     flex: 0 0 calc(50% - 15px);
+    margin-right: 20px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .testimonial-card {
-    flex: 0 0 100%;
+    flex: 0 0 280px;
+    margin-right: 20px;
+    padding: 22px;
+    min-height: 260px;
   }
 
-  .testimonials-slider {
-    animation: scroll-testimonials 20s linear infinite;
+  .testimonial-avatar {
+    width: 42px;
+    height: 42px;
+  }
+
+  .testimonial-info h6 {
+    font-size: 14px;
+  }
+
+  .testimonial-text {
+    font-size: 13px;
+    line-height: 1.5;
   }
 }
 
