@@ -1485,23 +1485,23 @@ strong {
 
 /* Product Detail Text Classes */
 .product-title {
-  color: #1a1a1a;
+  color: #1a1a1a !important;
 }
 
 .product-meta {
-  color: #C89B3C;
+  color: #C89B3C !important;
 }
 
 .product-desc {
-  color: #666;
+  color: #666 !important;
 }
 
 .product-detail {
-  color: #C89B3C;
+  color: #C89B3C !important;
 }
 
 .product-price {
-  color: #C89B3C;
+  color: #C89B3C !important;
 }
 
 .site-footer p span {
