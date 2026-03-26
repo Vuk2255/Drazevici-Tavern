@@ -7,7 +7,6 @@ with inline styles moved to CSS classes
 
 */
 
-
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
@@ -47,7 +46,6 @@ body {
   background-color: var(--white-color);
   font-family: var(--body-font-family);
 }
-
 
 /*---------------------------------------
   TYPOGRAPHY               
@@ -130,7 +128,6 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
-
 /*---------------------------------------
   SECTION               
 -----------------------------------------*/
@@ -160,7 +157,6 @@ strong {
   background-color: #C89B3C;
   color: var(--white-color);
 }
-
 
 /*---------------------------------------
   ANIMATED HEADLINE               
@@ -359,7 +355,6 @@ strong {
   }
 }
 
-
 /*---------------------------------------
   CUSTOM BUTTON               
 -----------------------------------------*/
@@ -405,7 +400,6 @@ strong {
 .custom-btn-group .link:hover {
   color: var(--link-hover-color);
 }
-
 
 /*---------------------------------------
   NAVIGATION BAR & OFFCANVAS              
@@ -697,7 +691,6 @@ strong {
   top: 8px;
 }
 
-
 /*---------------------------------------
   HERO        
 -----------------------------------------*/
@@ -748,7 +741,6 @@ strong {
   position: relative;
   z-index: 22;
 }
-
 
 /*---------------------------------------
   BACKGROUND IMAGE SECTION        
@@ -1048,7 +1040,6 @@ strong {
   max-width: 150px;
 }
 
-
 /*---------------------------------------
   ABOUT SECTOIN              
 -----------------------------------------*/
@@ -1116,7 +1107,6 @@ strong {
 .member-block-info p {
   margin-bottom: 0;
 }
-
 
 /*---------------------------------------
   CUSTOM BLOCK              
@@ -1222,7 +1212,6 @@ strong {
   color: var(--white-color);
 }
 
-
 /*---------------------------------------
   EVENTS SECTION            
 -----------------------------------------*/
@@ -1253,7 +1242,6 @@ strong {
   font-size: var(--h3-font-size);
   font-weight: var(--font-weight-medium);
 }
-
 
 /*---------------------------------------
   MEMBERSHIP SECTION            
@@ -1311,7 +1299,6 @@ strong {
   border-radius: var(--border-radius-medium);
   height: 100px;
 }
-
 
 /*---------------------------------------
   CONTACT               
@@ -1373,7 +1360,6 @@ strong {
   display: block;
   font-weight: var(--font-weight-bold);
 }
-
 
 /*---------------------------------------
   SITE FOOTER            
@@ -1530,7 +1516,6 @@ strong {
   margin-right: auto;
 }
 
-
 /*---------------------------------------
   CUSTOM FORM               
 -----------------------------------------*/
@@ -1588,7 +1573,6 @@ strong {
   margin-left: 15px;
 }
 
-
 /*---------------------------------------
   SOCIAL ICON               
 -----------------------------------------*/
@@ -1622,7 +1606,6 @@ strong {
   color: var(--white-color);
 }
 
-
 /*---------------------------------------
   FORM VALIDATION              
 -----------------------------------------*/
@@ -1650,7 +1633,6 @@ strong {
   padding: 12px 20px;
   font-weight: 500;
 }
-
 
 /*---------------------------------------
   TESTIMONIALS SECTION              
@@ -1769,7 +1751,6 @@ strong {
     line-height: 1.5;
   }
 }
-
 
 /*---------------------------------------
   SHOP SECTION              
@@ -1897,10 +1878,6 @@ strong {
   opacity: 0.6;
   cursor: not-allowed;
 }
-
-
-
-
 
 /*---------------------------------------
   RESPONSIVE STYLES              
@@ -2063,7 +2040,6 @@ strong {
   }
 }
 
-
 /*---------------------------------------
   ABOUT IMAGE               
 -----------------------------------------*/
@@ -2071,7 +2047,6 @@ strong {
   height: 360px;
   object-fit: cover;
 }
-
 
 /*---------------------------------------
   HERO BACKGROUND VARIANTS               
@@ -2089,7 +2064,6 @@ strong {
   background-position: center;
   background-attachment: fixed;
 }
-
 
 /*---------------------------------------
   SHOP SECTION               
@@ -2141,7 +2115,6 @@ strong {
   color: white;
   border: none;
 }
-
 
 /*---------------------------------------
   CHECKOUT SECTION               
@@ -2288,7 +2261,6 @@ strong {
 #contact-success-message {
   display: none;
 }
-
 
 /*---------------------------------------
   AUTHOR PAGE               
