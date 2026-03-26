@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Complete your rakija order securely with multiple payment options.">
+        <meta name="keywords" content="checkout, payment, purchase, secure, rakija order, payment methods">
+        <title>Checkout - Drazevici Tavern</title>
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+        <link rel="sitemap" type="application/xml" href="sitemap.xml">
+        <link rel="alternate" type="application/rss+xml" href="rss.xml" title="Drazevici Tavern RSS Feed">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <nav class="navbar navbar-expand-lg navbar-dark-page">
+                <div class="container">
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <img src="assets/images/logo.png" class="navbar-brand-image img-fluid" alt="Drazevici Tavern">
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-3">
+                        <div class="cart-nav-wrapper">
+                            <a class="btn custom-btn custom-border-btn" href="shop.html" role="button"><i class="bi bi-cart3"></i> Back to Shop</a>
+                        </div>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#section_1">Home</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block ms-lg-3">
+                            <a class="btn custom-btn custom-border-btn" href="shop.html" role="button">Back to Shop</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <section class="checkout-section section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12 text-center mb-5">
+                            <h1 class="text-dark mb-2">Checkout</h1>
+                            <p class="text-muted">Complete your purchase</p>
+                        </div>
+
+                        <div class="col-lg-12 col-12" id="checkout-content">
+                            <div class="row g-4">
+                                <!-- Left Column: Order Summary -->
+                                <div class="col-lg-6 col-12">
+                                    <div class="card checkout-card-full">
+                                        <div class="card-header checkout-card-header">
+                                            <h5 class="mb-0 text-white">Order Summary</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="checkout-items-list" class="checkout-items-list">
+                                                <!-- Items will be populated here -->
+                                            </div>
+                                            <hr class="checkout-divider">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h5 class="text-dark mb-0">Total Amount:</h5>
+                                                <h4 class="text-warning mb-0" id="checkout-total">РСД 0</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column: Billing & Payment -->
+                                <div class="col-lg-6 col-12">
+                                    <!-- Billing Information -->
+                                    <div class="card checkout-card mb-2">
+                                        <div class="card-header checkout-card-header-sm">
+                                            <h6 class="mb-0 text-white">Billing Information</h6>
+                                        </div>
+                                        <div class="card-body checkout-card-body-sm">
+                                            <form id="checkout-form">
+                                                <div class="row checkout-form-row">
+                                                    <div class="col-12">
+                                                        <label for="checkout-name" class="form-label text-dark checkout-form-label">Full Name</label>
+                                                        <input type="text" class="form-control form-control-sm checkout-form-input" id="checkout-name" placeholder="John Doe" required>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <label for="checkout-email" class="form-label text-dark checkout-form-label">Email</label>
+                                                        <input type="email" class="form-control form-control-sm checkout-form-input" id="checkout-email" placeholder="john@example.com" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row checkout-form-row-mt">
+                                                    <div class="col-12">
+                                                        <label for="checkout-phone" class="form-label text-dark checkout-form-label">Phone</label>
+                                                        <input type="tel" class="form-control form-control-sm checkout-form-input" id="checkout-phone" placeholder="+381 64 123 4567" required>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <label for="checkout-address" class="form-label text-dark checkout-form-label">Address</label>
+                                                        <input type="text" class="form-control form-control-sm checkout-form-input" id="checkout-address" placeholder="Suvodo, BB" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row checkout-form-row-mt">
+                                                    <div class="col-6">
+                                                        <label for="checkout-city" class="form-label text-dark checkout-form-label">City</label>
+                                                        <input type="text" class="form-control form-control-sm checkout-form-input" id="checkout-city" placeholder="Nova Varos" required>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label for="checkout-zip" class="form-label text-dark checkout-form-label">ZIP</label>
+                                                        <input type="text" class="form-control form-control-sm checkout-form-input" id="checkout-zip" placeholder="31320" required>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <!-- Payment Method -->
+                                    <div class="card checkout-card">
+                                        <div class="card-header checkout-card-header-sm">
+                                            <h6 class="mb-0 text-white">Payment Method</h6>
+                                        </div>
+                                        <div class="card-body checkout-card-body-sm">
+                                            <div class="checkout-payment-option">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="payment-method" id="payment-card" value="card" checked>
+                                                    <label class="form-check-label text-dark checkout-payment-label" for="payment-card">
+                                                        <i class="bi bi-credit-card"></i> Card
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="checkout-payment-option">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="payment-method" id="payment-bank" value="bank">
+                                                    <label class="form-check-label text-dark checkout-payment-label" for="payment-bank">
+                                                        <i class="bi bi-bank"></i> Bank Transfer
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="checkout-payment-option-last">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="payment-method" id="payment-paypal" value="paypal">
+                                                    <label class="form-check-label text-dark checkout-payment-label" for="payment-paypal">
+                                                        <i class="bi bi-wallet2"></i> PayPal
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card Details (shown when card is selected) -->
+                                            <div id="card-details">
+                                                <div class="row checkout-form-row">
+                                                    <div class="col-12">
+                                                        <label for="card-number" class="form-label text-dark checkout-form-label">Card #</label>
+                                                        <input type="text" class="form-control form-control-sm checkout-form-input" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                                                    </div>
+                                                </div>
+                                                <div class="row checkout-form-row-mt">
+                                                    <div class="col-6">
+                                                        <label for="card-expiry" class="form-label text-dark checkout-form-label">Exp</label>
+                                                        <input type="text" class="form-control form-control-sm checkout-form-input" id="card-expiry" placeholder="MM/YY" maxlength="5">
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label for="card-cvv" class="form-label text-dark checkout-form-label">CVV</label>
+                                                        <input type="text" class="form-control form-control-sm checkout-form-input" id="card-cvv" placeholder="123" maxlength="3">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Action Buttons -->
+                                            <div class="pt-2 border-top checkout-actions">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <a href="shop.html" class="btn btn-secondary w-100 checkout-btn-secondary">Continue Shopping</a>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <button type="button" class="btn custom-btn w-100 checkout-btn-primary" id="complete-purchase-btn">Complete Purchase</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Success Message -->
+                        <div class="col-lg-8 col-12 mx-auto" id="success-message">
+                            <div class="alert alert-success text-center checkout-success-alert">
+                                <i class="bi bi-check-circle checkout-success-icon"></i>
+                                <h2 class="text-success mb-3">Purchase Successful!</h2>
+                                <p class="text-dark mb-4">Thank you for your purchase. Your order has been confirmed and will be processed shortly.</p>
+                                <p class="text-muted mb-4">A confirmation email has been sent to your email address.</p>
+                                <a href="index.html" class="btn custom-btn checkout-btn-home">Return to Home</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12 me-auto mb-5 mb-lg-0">
+                        <a class="navbar-brand d-flex align-items-center" href="index.html">
+                            <img src="assets/images/logo.png" class="navbar-brand-image footer-logo img-fluid" alt="Drazevici Tavern">
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-12">
+                        <h5 class="site-footer-title mb-4">Call us and Arrange a Visit</h5>
+
+                        <p class="d-flex border-bottom pb-3 mb-3 me-lg-3">
+                            <span>Mon-Fri</span>
+                            6:00 AM - 6:00 PM
+                        </p>
+
+                        <p class="d-flex me-lg-3">
+                            <span>Sat-Sun</span>
+                            6:30 AM - 8:30 PM
+                        </p>
+                        <br>
+                        <p class="copyright-text">Copyright © 2026 Drazevici Tavern</p>
+                    </div>
+                    <div class="col-lg-2 col-12">
+                        <h5 class="site-footer-title mb-4">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="index.html" class="footer-link">Home</a></li>
+                            <li class="mb-2"><a href="about.html" class="footer-link">About</a></li>
+                            <li class="mb-2"><a href="shop.html" class="footer-link">Shop</a></li>
+                            <li class="mb-2"><a href="author.html" class="footer-link">Author</a></li>
+                            <li><a href="#documentation" class="footer-link">Documentation</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-12 ms-auto">
+                            <ul class="social-icon mt-lg-5 mt-3 mb-4">
+                                <li class="social-icon-item">
+                                    <a href="https://www.instagram.com" target="_blank" class="social-icon-link bi-instagram"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://www.x.com" target="_blank" class="social-icon-link bi-twitter">
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://www.whatsapp.com" target="_blank" class="social-icon-link bi-whatsapp"></a>
+                                </li>
+                            </ul>
+                        <p class="copyright-text">Vuk Dulanovic 138/23 Template by <a href="https://themewagon.com/themes/tiya/" target="_blank">ThemeWagon</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#C89B3C" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+        </footer>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

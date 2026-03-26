@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "author": {
+      "name": "Bogdan Bogdanovic",
+      "profession": "NBA Player",
+      "avatar": "assets/images/bogdan.jpg"
+    },
+    "reviewDetails": {
+      "rating": 5,
+      "date": "2023-11-15",
+      "text": "This is the real deal. Every time I open a bottle of Dulanovic Plum, it instantly reminds me of home. A true champion among brandies."
+    }
+  },
+  {
+    "id": 2,
+    "author": {
+      "name": "Mark Viduka",
+      "profession": "Football Legend",
+      "avatar": "assets/images/viduka.jpg"
+    },
+    "reviewDetails": {
+      "rating": 5,
+      "date": "2023-09-22",
+      "text": "As someone who appreciates premium Balkan spirits, I can safely say nothing beats a glass of Dulanovic Golden Quince after a good meal. Absolutely world-class."
+    }
+  },
+  {
+    "id": 3,
+    "author": {
+      "name": "Nikola Jokic",
+      "profession": "NBA MVP",
+      "avatar": "assets/images/jokic.jpg"
+    },
+    "reviewDetails": {
+      "rating": 5,
+      "date": "2024-01-10",
+      "text": "I serve Dulanovic Pear to all my friends and teammates in Denver. The wooden crate packaging is pure perfection. They love it!"
+    }
+  },
+  {
+    "id": 4,
+    "author": {
+      "name": "Gordon Ramsay",
+      "profession": "Chef",
+      "avatar": "assets/images/gordon.jpg"
+    },
+    "reviewDetails": {
+      "rating": 4,
+      "date": "2024-02-05",
+      "text": "Finally, a fruit brandy with depth, character, and an incredible finish. The oak barrel aging process here is executed brilliantly. Highly recommended."
+    }
+  },
+  {
+    "id": 5,
+    "author": {
+      "name": "Azis",
+      "profession": "Singer",
+      "avatar": "assets/images/azis.jpg"
+    },
+    "reviewDetails": {
+      "rating": 5,
+      "date": "2023-12-01",
+      "text": "The Dulanovic Quince is my absolute go-to gift for international singers and actors. It perfectly captures our tradition in a premium bottle."
+    }
+  }
+]

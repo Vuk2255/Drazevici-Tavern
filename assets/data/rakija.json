@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1,
+    "name": "Dulanovic Premium Plum - Large",
+    "category": "Plum",
+    "packagingType": "Bottle",
+    "price": 2500,
+    "mostPopular": true,
+    "details": {
+      "volume": "0.7L",
+      "alcoholPercentage": 45,
+      "agingYears": 5,
+      "description": "Traditional double-distilled plum rakija aged in oak barrels."
+    },
+    "stockInfo": {
+      "inStock": true,
+      "quantityAvailable": 120
+    },
+    "image": "assets/images/plum-large.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Dulanovic Premium Plum - Small",
+    "category": "Plum",
+    "packagingType": "Miniature",
+    "price": 350,
+    "mostPopular": false,
+    "details": {
+      "volume": "0.05L",
+      "alcoholPercentage": 45,
+      "agingYears": 5,
+      "description": "Perfect pocket-sized traditional plum rakija."
+    },
+    "stockInfo": {
+      "inStock": true,
+      "quantityAvailable": 300
+    },
+    "image": "assets/images/plum-small.png"
+  },
+  {
+    "id": 3,
+    "name": "Dulanovic Plum Crate (6 Bottles)",
+    "category": "Plum",
+    "packagingType": "Crate",
+    "price": 14000,
+    "mostPopular": false,
+    "details": {
+      "volume": "6 x 0.7L",
+      "alcoholPercentage": 45,
+      "agingYears": 5,
+      "description": "Wooden crate containing 6 large bottles of premium plum rakija."
+    },
+    "stockInfo": {
+      "inStock": true,
+      "quantityAvailable": 15
+    },
+    "image": "assets/images/plum-crate.png"
+  },
+  {
+    "id": 4,
+    "name": "Dulanovic Golden Quince - Large",
+    "category": "Quince",
+    "packagingType": "Bottle",
+    "price": 3000,
+    "mostPopular": true,
+    "details": {
+      "volume": "0.7L",
+      "alcoholPercentage": 40,
+      "agingYears": 3,
+      "description": "Aromatic quince rakija with a distinct, fruity flavor profile."
+    },
+    "stockInfo": {
+      "inStock": true,
+      "quantityAvailable": 85
+    },
+    "image": "assets/images/quince-large.png"
+  },
+  {
+    "id": 5,
+    "name": "Dulanovic Golden Quince - Small",
+    "category": "Quince",
+    "packagingType": "Miniature",
+    "price": 400,
+    "mostPopular": false,
+    "details": {
+      "volume": "0.05L",
+      "alcoholPercentage": 40,
+      "agingYears": 3,
+      "description": "Miniature bottle of our famous golden quince rakija."
+    },
+    "stockInfo": {
+      "inStock": true,
+      "quantityAvailable": 250
+    },
+    "image": "assets/images/quince-small.png"
+  },
+  {
+    "id": 6,
+    "name": "Dulanovic Quince Crate (6 Bottles)",
+    "category": "Quince",
+    "packagingType": "Crate",
+    "price": 17000,
+    "mostPopular": false,
+    "details": {
+      "volume": "6 x 0.7L",
+      "alcoholPercentage": 40,
+      "agingYears": 3,
+      "description": "Elegant wooden crate with 6 bottles of our finest quince rakija."
+    },
+    "stockInfo": {
+      "inStock": false,
+      "quantityAvailable": 0
+    },
+    "image": "assets/images/quince-crate.png"
+  },
+  {
+    "id": 7,
+    "name": "Dulanovic Royal Pear - Large",
+    "category": "Pear",
+    "packagingType": "Bottle",
+    "price": 2800,
+    "mostPopular": true,
+    "details": {
+      "volume": "0.7L",
+      "alcoholPercentage": 42,
+      "agingYears": 2,
+      "description": "Smooth Williams pear rakija with an intense floral aroma."
+    },
+    "stockInfo": {
+      "inStock": true,
+      "quantityAvailable": 90
+    },
+    "image": "assets/images/pear-large.png"
+  },
+  {
+    "id": 8,
+    "name": "Dulanovic Royal Pear - Small",
+    "category": "Pear",
+    "packagingType": "Miniature",
+    "price": 380,
+    "mostPopular": true,
+    "details": {
+      "volume": "0.05L",
+      "alcoholPercentage": 42,
+      "agingYears": 2,
+      "description": "Tasting size of our signature Williams pear rakija."
+    },
+    "stockInfo": {
+      "inStock": true,
+      "quantityAvailable": 180
+    },
+    "image": "assets/images/pear-small.png"
+  },
+  {
+    "id": 9,
+    "name": "Dulanovic Pear Crate (6 Bottles)",
+    "category": "Pear",
+    "packagingType": "Crate",
+    "price": 15500,
+    "mostPopular": true,
+    "details": {
+      "volume": "6 x 0.7L",
+      "alcoholPercentage": 42,
+      "agingYears": 2,
+      "description": "Rustic wooden crate carrying 6 large bottles of royal pear rakija."
+    },
+    "stockInfo": {
+      "inStock": true,
+      "quantityAvailable": 20
+    },
+    "image": "assets/images/pear-crate.png"
+  }
+]
