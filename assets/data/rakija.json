@@ -35,7 +35,7 @@
       "inStock": true,
       "quantityAvailable": 300
     },
-    "image": "assets/images/plum-small.png"
+    "image": "assets/images/plum-small.jpg"
   },
   {
     "id": 3,
@@ -54,7 +54,7 @@
       "inStock": true,
       "quantityAvailable": 15
     },
-    "image": "assets/images/plum-crate.png"
+    "image": "assets/images/plum-crate.jpg"
   },
   {
     "id": 4,
@@ -73,7 +73,7 @@
       "inStock": true,
       "quantityAvailable": 85
     },
-    "image": "assets/images/quince-large.png"
+    "image": "assets/images/quince-large.jpg"
   },
   {
     "id": 5,
@@ -92,7 +92,7 @@
       "inStock": true,
       "quantityAvailable": 250
     },
-    "image": "assets/images/quince-small.png"
+    "image": "assets/images/quince-small.jpg"
   },
   {
     "id": 6,
@@ -111,7 +111,7 @@
       "inStock": false,
       "quantityAvailable": 0
     },
-    "image": "assets/images/quince-crate.png"
+    "image": "assets/images/quince-crate.jpg"
   },
   {
     "id": 7,
@@ -130,7 +130,7 @@
       "inStock": true,
       "quantityAvailable": 90
     },
-    "image": "assets/images/pear-large.png"
+    "image": "assets/images/pear-large.jpg"
   },
   {
     "id": 8,
@@ -149,7 +149,7 @@
       "inStock": true,
       "quantityAvailable": 180
     },
-    "image": "assets/images/pear-small.png"
+    "image": "assets/images/pear-small.jpg"
   },
   {
     "id": 9,
@@ -168,6 +168,6 @@
       "inStock": true,
       "quantityAvailable": 20
     },
-    "image": "assets/images/pear-crate.png"
+    "image": "assets/images/pear-crate.jpg"
   }
 ]
